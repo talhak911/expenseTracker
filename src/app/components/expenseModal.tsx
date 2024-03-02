@@ -7,9 +7,9 @@ export default function ExpenseModal(props:expenseProps)
     const [errors, setErrors] = useState<string[]>([])
     return(
        
-<>
+<div className="w-full">
 <div className={`modal ${props.isOpen ? 'block' : 'hidden'}`}>
-            <div className="modal-overlay absolute top-0 left-0 w-full h-full bg-gray-800 bg-opacity-80">
+            <div className="modal-overlay  overflow-hidden absolute top-0 left-0 w-full h-full bg-gray-800 bg-opacity-80">
 { <div className="float min-h-screen  py-6 flex flex-col justify-center sm:py-12">
       <div className="relative py-3 sm:max-w-xl sm:mx-auto">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-700 to-purple-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
@@ -27,7 +27,7 @@ export default function ExpenseModal(props:expenseProps)
                  
               </div>
               <form >
-                  <div className="flex justify-between mb-4">
+                  <div className="flex justify-center  flex-col md:flex-row md:justify-between mb-4">
                       <div className="w-1/2 pr-2">
                           <label htmlFor="amount" className="block text-sm font-medium text-gray-700">
                              Amount
@@ -127,6 +127,6 @@ export default function ExpenseModal(props:expenseProps)
   </div>      }
     </div>
     </div>
-</>    
+</div>    
     )
 }

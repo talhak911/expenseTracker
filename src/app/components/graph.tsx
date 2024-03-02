@@ -6,7 +6,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 
 export default function BarChartWrapper({ data }:any) {
 return( 
-  <>
+ 
     <ResponsiveContainer width="100%" height="100%">
     <BarChart
       width={500}
@@ -28,6 +28,6 @@ return(
       <Bar dataKey="amount" fill="#8884d8" background={{ fill: '#eee' }} />
     </BarChart>
   </ResponsiveContainer>
-</>
+
 )
   }

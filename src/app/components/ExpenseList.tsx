@@ -201,8 +201,8 @@ export default function ExpenseTracker() {
     },
   ];
     return (
-    <div>
-    <h1 className="text-5xl text-center m-5">Expense Tracker</h1>
+    <div className="  overflow-x-scroll">
+    <h1 className="text-3xl md:text-5xl text-center m-5">Expense Tracker</h1>
     
 
 
