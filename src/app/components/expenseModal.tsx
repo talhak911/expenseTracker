@@ -7,13 +7,13 @@ export default function ExpenseModal(props:expenseProps)
     const [errors, setErrors] = useState<string[]>([])
     return(
        
-<div className="w-full">
-<div className={`modal ${props.isOpen ? 'block' : 'hidden'}`}>
-            <div className="modal-overlay  overflow-hidden absolute top-0 left-0 w-full h-full bg-gray-800 bg-opacity-80">
-{ <div className="float min-h-screen  py-6 flex flex-col justify-center sm:py-12">
-      <div className="relative py-3 sm:max-w-xl sm:mx-auto">
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-700 to-purple-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
-          <div className="text-white relative px-4 py-10 bg-indigo-400 shadow-lg sm:rounded-3xl sm:p-100">
+<div className="w-screen">
+
+<div className={props.isOpen ? "block fixed inset-0 overflow-y-auto" : "hidden"}>
+      <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center block sm:p-0">
+        <div className="modal-overlay absolute inset-0 bg-gray-800 bg-opacity-80 transition-opacity" onClick={props.isClose}></div>
+        <div className="w-full inline-block align-middle bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:max-w-2xl sm:w-full">
+          <div className="text-white relative px-4 py-10 bg-indigo-400 shadow-lg sm:rounded-3xl sm:p-10">
           {props.expenseObj.id !=='' ?<></>:
             <><button  onClick={props.isClose} className="button-57" role="button"><span className="text">Close</span><span><VscChromeClose /></span></button>
                
@@ -124,9 +124,9 @@ export default function ExpenseModal(props:expenseProps)
               </form>
           </div>
       </div>
-  </div>      }
+  </div>      
     </div>
-    </div>
+    
 </div>    
     )
 }
