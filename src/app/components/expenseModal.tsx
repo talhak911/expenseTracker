@@ -103,7 +103,7 @@ export default function ExpenseModal(props:expenseProps)
                             <button
                             type="button"
                                 onClick={props.onUpdatehandle}
-                                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                                className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600"
                             >
                                 update Expense
                             </button>
@@ -113,7 +113,7 @@ export default function ExpenseModal(props:expenseProps)
                       <button
                           // onClick={onClickHandler}
                           type="button"
-                          className="shadow bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                          className="shadow bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
                           onClick={props.onSubmithandle}
                       >
                           Add Expense
